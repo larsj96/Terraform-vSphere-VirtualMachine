@@ -67,3 +67,8 @@ variable "vcpu_count" {
 variable "memory" { 
     description = "RAM in MB"
 }
+
+variable "is_windows_image" {
+  description = "Boolean flag to notify when the custom image is windows based."
+  default     = false
+}
