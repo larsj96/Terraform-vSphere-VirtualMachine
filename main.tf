@@ -1,5 +1,5 @@
 resource "vsphere_virtual_machine" "linux" {
-  count             = var.is_windows_image ? 1 : 0
+  count             = var.is_windows_image ? 0 : 1
   name              = var.vm_name
   resource_pool_id  = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id      = data.vsphere_datastore.datastore.id
