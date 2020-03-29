@@ -46,7 +46,7 @@ resource "vsphere_virtual_machine" "linux" {
     }
 
   }
-},
+}
 
 resource "vsphere_virtual_machine" "windows" {
   count = var.is_windows_image == "true"
