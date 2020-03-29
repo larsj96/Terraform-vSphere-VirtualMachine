@@ -1,4 +1,5 @@
-module "Linux" {
+module "Windows" {
+  is_windows_image = "1"
   source         = "github.com/jonhowe/TF-vSphereVM/"
   vsphere_server = "vcenter.home.lab"
   vsphere_user = "administrator@vsphere.local"
