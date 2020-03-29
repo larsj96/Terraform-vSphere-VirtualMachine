@@ -47,6 +47,7 @@ resource "vsphere_virtual_machine" "linux" {
 
   }
 },
+
 resource "vsphere_virtual_machine" "windows" {
   count = var.is_windows_image == "true"
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
