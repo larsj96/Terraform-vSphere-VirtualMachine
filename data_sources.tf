@@ -11,17 +11,17 @@ data "vsphere_datacenter" "dc" {
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "vsanDatastore"
+  name          = var.datastore
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_compute_cluster" "cluster" {
-  name          = "Cluster"
+  name          = var.cluster
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_network" "network" {
-  name          = "100-LabNetwork"
+  name          = var.portgroup
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
