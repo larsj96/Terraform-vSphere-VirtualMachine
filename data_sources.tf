@@ -1,4 +1,3 @@
-# Base config
 # Vcenter connection parameters
 provider "vsphere" {
   user                 = var.vsphere_user
