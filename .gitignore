@@ -2,3 +2,5 @@ homelab.auto*
 *.tfvars
 .terraform/plugins/
 *.planout
+*.tfstate
+*.tfstate.lock.info
