@@ -1,3 +1,4 @@
 homelab.auto*
 *.tfvars
 .terraform/plugins/
+*.planout
