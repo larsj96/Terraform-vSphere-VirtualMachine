@@ -4,3 +4,4 @@ homelab.auto*
 *.planout
 *.tfstate
 *.tfstate.lock.info
+*.tfstate.backup
