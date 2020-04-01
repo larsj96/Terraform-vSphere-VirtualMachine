@@ -1,3 +1,32 @@
+output "DC_ID" {
+  description = "id of vSphere Datacenter"
+  value       = data.vsphere_datacenter.dc.id
+}
+output "ResPool_ID" {
+  description = "Resource Pool id"
+  value       = data.vsphere_resource_pool.pool.id
+}
+
+output "Windows-VM" {
+  description = "VM Names"
+  value       = vsphere_virtual_machine.windows.*.name
+}
+
+output "Windows-ip" {
+  description = "default ip address of the deployed VM"
+  value       = vsphere_virtual_machine.windows.*.default_ip_address
+}
+
+output "Windows-guest-ip" {
+  description = "all the registered ip address of the VM"
+  value       = vsphere_virtual_machine.windows.*.guest_ip_addresses
+}
+
+output "Windows-uuid" {
+  description = "UUID of the VM in vSphere"
+  value       = vsphere_virtual_machine.windows.*.uuid
+}
+
 output "Linux-VM" {
   description = "VM Names"
   value       = vsphere_virtual_machine.linux.*.name
