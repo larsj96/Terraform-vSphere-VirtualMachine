@@ -3,7 +3,6 @@ output "DC_ID" {
   value       = data.vsphere_datacenter.dc.id
 }
 
-
 output "Windows-VM" {
   description = "VM Names"
   value       = vsphere_virtual_machine.windows.*.name
