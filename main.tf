@@ -56,6 +56,7 @@ resource "vsphere_virtual_machine" "linux" {
 
   clone {
     template_uuid = data.vsphere_virtual_machine.template.id
+    linked_clone = "true"
 
     customize {
       #https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#linux-customization-options
@@ -106,6 +107,7 @@ resource "vsphere_virtual_machine" "windows" {
 
   clone {
     template_uuid = data.vsphere_virtual_machine.template.id
+    linked_clone = "true"
 
     customize {
       #https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#windows-customization-options
