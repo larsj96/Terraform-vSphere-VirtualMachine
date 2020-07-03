@@ -1,3 +1,7 @@
+# Author: Jon Howe
+# Blog: https://www.virtjunkie.com/vmware-provisioning-using-hashicorp-terraform-part-2/
+# GitHub: https://github.com/jonhowe/Terraform-vSphere-VirtualMachine/blob/master/variables.tf
+
 variable "vsphere_server" {
   description = "vsphere server for the environment - EXAMPLE: vcenter01.hosted.local"
 }

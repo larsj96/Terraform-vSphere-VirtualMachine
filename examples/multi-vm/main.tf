@@ -1,3 +1,7 @@
+# Author: Jon Howe
+# Blog: https://www.virtjunkie.com/vmware-provisioning-using-hashicorp-terraform-part-2/
+# GitHub: https://github.com/jonhowe/Terraform-vSphere-VirtualMachine/blob/master/examples/multi-vm/main.tf
+
 module "DC1" {
   is_windows_image = "1"
   source         = "github.com/jonhowe/Terraform-vSphere-VirtualMachine/"

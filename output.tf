@@ -1,3 +1,7 @@
+# Author: Jon Howe
+# Blog: https://www.virtjunkie.com/vmware-provisioning-using-hashicorp-terraform-part-2/
+# GitHub: https://github.com/jonhowe/Terraform-vSphere-VirtualMachine/blob/master/output.tf
+
 output "DC_ID" {
   description = "id of vSphere Datacenter"
   value       = data.vsphere_datacenter.dc.id
