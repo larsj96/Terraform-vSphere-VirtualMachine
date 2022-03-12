@@ -20,7 +20,7 @@ data "vsphere_datastore" "datastore" {
 }
 
 data "vsphere_datastore_cluster" "datastore_cluster" {
-  name          = "DatastoreCluster_nvme"
+  name          = var.datastore_cluster
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
