@@ -33,6 +33,10 @@ variable "datastore" {
     description = "datastore name in vCenter"
 }
 
+variable "datastore_cluster" { 
+    description = "datastore cluster name in vCenter"
+}
+
 variable "cluster" {  
     description = "Cluster name in vCenter"
 }
