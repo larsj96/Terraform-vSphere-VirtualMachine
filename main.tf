@@ -19,6 +19,11 @@ data "vsphere_datastore" "datastore" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
+data "vsphere_datastore_cluster" "datastore_cluster" {
+  name          = "DatastoreCluster_nvme"
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
+
 data "vsphere_compute_cluster" "cluster" {
   name          = var.cluster
   datacenter_id = data.vsphere_datacenter.dc.id
@@ -38,7 +43,8 @@ resource "vsphere_virtual_machine" "linux" {
   count             = var.is_windows_image ? 0 : 1
   name              = var.vm_name
   resource_pool_id  = data.vsphere_compute_cluster.cluster.resource_pool_id
-  datastore_id      = data.vsphere_datastore.datastore.id
+ #  datastore_id      = data.vsphere_datastore.datastore.id
+ datastore_cluster_id     = data.vsphere_datastore_cluster.datastore_cluster.id	
 
   num_cpus = var.vcpu_count
   memory   = var.memory
@@ -89,7 +95,8 @@ resource "vsphere_virtual_machine" "windows" {
   count = var.is_windows_image ? 1 : 0
   name              = var.vm_name
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
-  datastore_id     = data.vsphere_datastore.datastore.id
+ # datastore_id     = data.vsphere_datastore.datastore.id
+datastore_cluster_id     = data.vsphere_datastore_cluster.datastore_cluster.id	
 
   num_cpus = var.vcpu_count
   memory   = var.memory
